@@ -2,20 +2,23 @@
 // export const toggleTodo = 'TOGGLE_TODO'
 // export const setVisibilityFilter = 'SET_VISIBILITY_FILTER'
 
-export const visivilityFilters = {
+export const visibilityFilters = {
   showAll: 'SHOW_ALL',
   showComplete: 'SHOW_COMPLETED',
   showActive: 'SHOW_ACTIVE',
 };
 
-export function toggleTodo(index) {
-  return { type: 'TOGGLE_TODO', index };
-}
+export const toggleTodo = id => ({
+  type: 'TOGGLE_TODO',
+  id,
+});
 
-export function addTodo(text) {
-  return { type: 'ADD_TODO', text };
-}
+export const addTodo = text => ({
+  type: 'ADD_TODO',
+  text,
+});
 
-export function setVisibilitiyFilter(filter) {
-  return { type: 'SET_VISIBILITY_FILTER', filter };
-}
+export const setVisibilitiyFilter = filter => ({
+  type: 'SET_VISIBILITY_FILTER',
+  filter,
+});
